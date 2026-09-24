@@ -4,14 +4,22 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Social Connectivity Platform — OAuth 2.0 Authentication</title>
+    <meta name="description" content="Connect with creators, share ideas, and join your community." />
+    <title>Social Connectivity Platform</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/assets/index-Dp5Zs9wY.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-1K6P15cr.css">
+    <script type="module" crossorigin src="/assets/index-CtsGk8vX.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CQLJUEAw.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="background" class="page-background" aria-hidden="true">
+      <canvas id="fibers-canvas"></canvas>
+      <div class="background-sheen"></div>
+    </div>
+    <div id="root" class="app-shell"></div>
+    <dialog id="app-dialog" aria-labelledby="dialog-title"></dialog>
+    <div id="toasts" class="toast-container" role="status" aria-live="polite"></div>
+    <noscript>Please enable JavaScript to use Social Connectivity Platform.</noscript>
   </body>
 </html>

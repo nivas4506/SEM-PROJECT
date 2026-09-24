@@ -612,7 +612,7 @@ html, body {
   border-color: rgba(239, 68, 68, 0.3);
 }
 
-/* ReactBits ShinyText Keyframe */
+/* Shimmer animation */
 @keyframes shine {
   0% {
     background-position: 100%;
@@ -622,7 +622,7 @@ html, body {
   }
 }
 
-/* ReactBits Dock Item hover effect */
+/* Dock item hover effect */
 .dock-item:hover {
   background: rgba(255, 255, 255, 0.12) !important;
   color: #ffffff !important;
@@ -637,6 +637,35 @@ html, body {
   .main-content-centered {
     margin-left: 80px !important;
     width: calc(100% - 90px) !important;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scaleY(0.4);
+  }
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(1.8);
+    opacity: 0;
   }
 }
 

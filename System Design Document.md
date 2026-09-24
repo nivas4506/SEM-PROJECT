@@ -7,6 +7,8 @@
 **Author:** Software Architecture & Engineering Team  
 **Date:** September 2026  
 
+**Current web implementation:** Plain HTML, CSS, and JavaScript ES modules. Native DOM events, WebSocket, WebGL, and MediaRecorder APIs drive the interface. Vite is used only for development and static builds. See [README.md](README.md) for the local demo setup; the distributed services below describe the broader architecture target.
+
 ---
 
 ## 1. Executive Summary & Scope
@@ -53,7 +55,7 @@ The platform uses a **Modular Distributed Services Architecture**. A central API
 ```mermaid
 flowchart TB
     subgraph Clients["Clients Layer"]
-        Web["Web Client (React / Next.js)"]
+        Web["Web Client (HTML / CSS / JavaScript)"]
         Mobile["Mobile Client (iOS / Android / PWA)"]
     end
 
