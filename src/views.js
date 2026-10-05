@@ -19,7 +19,7 @@ export function authView(mode, background) {
     `<button type="button" class="auth-btn-oauth" data-action="oauth" data-provider="${id}" ${index > 2 ? 'data-extra-provider hidden' : ''}>${providerMark(id)}<span>${signup ? name : `Sign in with ${name}`}</span></button>`
   ).join('')}</div><div class="auth-view-more">${button('more-providers', signup ? 'More providers (Discord, X)' : 'View more', 'auth-view-more-btn', 'aria-expanded="false"')}</div>`;
   return `<header class="auth-header">
-    <div class="brand"><img src="/logo.png" alt="" class="brand-logo" /><span class="auth-brand-name">Social Connectivity Platform</span></div>
+    <div class="brand"><img src="./assets/logo.png" alt="" class="brand-logo" /><span class="auth-brand-name">Social Connectivity Platform</span></div>
     <div class="row">${button('background', `${icon('sparkle', 14)} <span>${background === 'fibers' ? 'Ghost Fibers' : 'Silk Gradient'}</span>`, 'pill background-toggle')}${button('help', 'Need Help?', 'pill')}</div>
   </header>
   <main class="auth-main"><div class="auth-box-wrapper animate-fade-in"><div class="auth-box-halo" aria-hidden="true"></div><section class="auth-box-card ${signup ? 'signup-card' : ''}">
@@ -71,7 +71,7 @@ export function onboardingView(profile, step) {
 
 export function shellView(user, tab) {
   return `<nav class="nav-rail" aria-label="Main navigation">
-    <button type="button" class="nav-logo" data-action="navigate" data-tab="feed" aria-label="Home"><img src="/logo.png" alt="" /></button>
+    <button type="button" class="nav-logo" data-action="navigate" data-tab="feed" aria-label="Home"><img src="./assets/logo.png" alt="" /></button>
     <div class="nav-links">${navigation.map(([id, glyph, label]) => `<button type="button" class="nav-button ${tab === id ? 'active' : ''}" data-action="navigate" data-tab="${id}" title="${label}" aria-label="${label}" ${tab === id ? 'aria-current="page"' : ''}>${id === 'profile' ? avatar(user) : icon(glyph, 24)}${id === 'messages' ? '<span id="unread-badge" class="unread-badge" hidden></span>' : ''}</button>`).join('')}
     ${button('create-post', icon('plus', 25), 'nav-button create-button', 'aria-label="Create New Post" title="Create New Post"')}</div>
     ${button('menu', icon('menu', 25), 'nav-button menu-button', 'aria-label="More options" title="More options"')}

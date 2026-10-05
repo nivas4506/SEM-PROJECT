@@ -703,7 +703,7 @@ dialog.addEventListener('click', event => {
   if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) closeDialog();
 });
 document.addEventListener('error', event => {
-  if (event.target instanceof HTMLImageElement && !event.target.src.endsWith('/logo.png')) event.target.src = '/logo.png';
+  if (event.target instanceof HTMLImageElement && !event.target.src.endsWith('/logo.png')) event.target.src = './assets/logo.png';
 }, true);
 window.addEventListener('pagehide', () => { stopRecording(false); socket.stop(); });
 window.addEventListener('pageshow', event => { if (event.persisted && session) socket.start(session); });

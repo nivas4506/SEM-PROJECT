@@ -35,7 +35,7 @@ small { font-size: 11px; color: #94a3b8; }
 .page-background::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, transparent 35%, rgba(4,3,10,.55)); }
 #fibers-canvas { width: 100%; height: 100%; display: none; }
 #fibers-canvas.ready { display: block; }
-.page-background[data-mode="silk"] { background: #061522 url('/ocean-gradient.jpg') center / cover no-repeat; }
+.page-background[data-mode="silk"] { background: #061522 url('./assets/ocean-gradient.jpg') center / cover no-repeat; }
 .page-background[data-mode="silk"] canvas { display: none; }
 .background-sheen { display: none; position: absolute; inset: 0; background: radial-gradient(circle at var(--light-x, 60%) var(--light-y, 40%), rgba(34,211,238,.14), transparent 65%); }
 [data-mode="silk"] .background-sheen { display: block; }

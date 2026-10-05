@@ -5,7 +5,7 @@ export function escapeHTML(value = '') {
   })[char]);
 }
 
-export function mediaURL(value, fallback = '/logo.png') {
+export function mediaURL(value, fallback = './assets/logo.png') {
   try {
     const url = new URL(value, location.href);
     if (['http:', 'https:'].includes(url.protocol)) return escapeHTML(url.href);
